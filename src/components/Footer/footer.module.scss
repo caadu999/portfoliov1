@@ -1,0 +1,15 @@
+.footer {
+  position: relative;
+  height: 800px;
+  background-color: #45444f;
+  color: white;
+
+  clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.conteudo {
+  position: fixed;
+  bottom: 0;
+  height: 800px;
+  width: 100%;
+}

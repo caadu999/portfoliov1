@@ -1,0 +1,22 @@
+.texto {
+  color: white;
+  padding: 25px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.links {
+  text-align: right;
+  position: absolute;
+
+  padding: 25px;
+  bottom: 0;
+  right: 0;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+  }
+}
