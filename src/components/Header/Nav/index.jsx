@@ -5,8 +5,10 @@ import { motion } from "framer-motion";
 const variantes = {
   initial: {
     opacity: 0,
+    rotateX: 90,
   },
   enter: (i) => ({
+    rotateX: 0,
     opacity: 1,
     transition: { delay: 0.5 + i * 0.1 },
   }),

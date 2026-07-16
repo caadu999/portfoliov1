@@ -2,25 +2,32 @@
 import { great } from "../../../public/fonts/fonts";
 import styles from "@/components/TituloHome/titulo.module.scss";
 import { cormorant } from "../../../public/fonts/fonts";
-import { vt } from "../../../public/fonts/fonts";
-import { FaCode } from "react-icons/fa";
 import { motion } from "framer-motion";
+import localFont from "next/font/local";
+
+const mondWest = localFont({
+  src: "../../../public/fonts/ppmondwest-regular.otf",
+});
+
+const editorial = localFont({
+  src: "../../../public/fonts/EditorialNew-Light.ttf",
+});
 
 export default function Titulo() {
   return (
-    <main className={styles.main}>
-      <h1 className={`${styles.texto} ${cormorant.className}`}>
-        <span className={great.className}>E</span>DUARDO{" "}
-        <span className={great.className}>S</span>OUZA
+    <main className={`${styles.main} ${editorial.className}`}>
+      <h1 className={`${styles.texto} `}>
+        <span className={`${great.className} ${styles.initial}`}>E</span>DUARDO{" "}
+        <span className={`${great.className} ${styles.initial}`}>S</span>OUZA
       </h1>
       <h1 className={cormorant.className}>
-        <span className={vt.className}>&lt; &gt; DESENVOLVEDOR FRONT-END</span>
+        <span className={mondWest.className}>☼ FRONT-END ☀</span>
       </h1>
       <h1>REACT NEXT.JS TAILWIND</h1>
       <h1>JAVASCRIPT HTML CSS GIT</h1>
       <h1>FRAMER TYPESCRIPT</h1>
       <h1>
-        BOOTSTRAP <span className={vt.className}>&lt; &gt;</span>
+        BOOTSTRAP
         <motion.span
           animate={{ opacity: [1, 1, 0, 0] }}
           transition={{

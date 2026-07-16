@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import "./globals.css";
 import Footer from "@/components/Footer";
 
-
 import Overlay from "@/components/Overlay";
 import { IBM_Plex_Sans } from "next/font/google";
 
@@ -24,7 +23,7 @@ export default function RootLayout({ children }) {
         <Overlay />
         <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

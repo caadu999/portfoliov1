@@ -2,7 +2,7 @@
 import styles from "@/components/Header/header.module.scss";
 import Button from "./button";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Nav from "./Nav";
 
 const variantes = {
@@ -18,7 +18,7 @@ const variantes = {
     height: 40,
     top: "0px",
     right: "0px",
-    transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.5, delay: 0.35, ease: [0.76, 0, 0.24, 1] },
   },
 };
 
@@ -26,19 +26,16 @@ export default function Header() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-
-      <div className={styles.header}>
-    
-        <motion.div
-          className={styles.menu}
-          variants={variantes}
-          animate={isActive ? "open" : "closed"}
-          initial="closed"
-        >
-          {isActive && <Nav />}
-        </motion.div>
-        <Button isActive={isActive} setIsActive={setIsActive} />
-      </div>
-  
+    <div className={styles.header}>
+      <motion.div
+        className={styles.menu}
+        variants={variantes}
+        animate={isActive ? "open" : "closed"}
+        initial="closed"
+      >
+        <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
+      </motion.div>
+      <Button isActive={isActive} setIsActive={setIsActive} />
+    </div>
   );
 }

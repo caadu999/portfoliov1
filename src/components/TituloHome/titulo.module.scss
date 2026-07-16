@@ -1,15 +1,20 @@
 .main {
-  color: white;
+  color: #cacaca;
   display: flex;
-  line-height: 60px;
+  line-height: 88px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   user-select: none;
+  font-size: 40px;
+  letter-spacing: 3px;
 
-  h1{
-    font-size: 4em;
+  span {
+    font-size: 102px;
   }
 }
 
+.initial {
+  font-weight: bolder;
+}

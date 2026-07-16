@@ -1,12 +1,13 @@
 "use client";
-import styles from "@/app/page.module.css";
-import { useEffect, useRef } from "react";
-import Cursor from "@/components/Cursor";
-import Titulo from "@/components/TituloHome";
-import Sobre from "@/components/Sobre";
-import Lenis from "lenis";
 
-export default function Home() {
+import { useRef, useEffect, useState } from "react";
+import styles from "@/app/Projetos/projetos.module.scss";
+import { anton } from "../../../public/fonts/fonts";
+import { Works } from "./data";
+import Lenis from "lenis";
+import Card from "./_Card";
+
+export default function Projetos() {
   const loader = useRef(null);
   const path = useRef(null);
   const initialCurve = 200;
@@ -79,24 +80,15 @@ export default function Home() {
     }, 500);
   }, []);
 
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
-
   return (
     <main className={styles.main}>
-      <Sobre />
-      <Titulo />
+      <h1 className={`${anton.className} ${styles.title}`}>PROJETOS</h1>
+      <div className={styles.body}>
+        {Works.map((work) => (
+          <Card key={work.title} work={work} />
+        ))}
+      </div>
 
-      <Cursor />
       <div ref={loader} className={styles.loader}>
         <svg>
           <path ref={path}></path>

@@ -8,29 +8,27 @@ export default function Button({ isActive, setIsActive }) {
       }}
       className={styles.button}
     >
-      <motion.div className={styles.slider}
-      animate={{top: isActive ? "-100%" : "0"}}
-      transition={{duration: 0.5, ease: [0.75, 0, 0.24, 1]} }
+      <motion.div
+        className={styles.slider}
+        animate={{ top: isActive ? "-100%" : "0" }}
+        transition={{ duration: 0.5, ease: [0.75, 0, 0.24, 1] }}
       >
         <div className={styles.el}>
-          <Texto texto="MENU"/>
-         
+          <Texto texto="MENU" />
         </div>
         <div className={styles.el}>
-          <Texto texto="FECHAR"/>
-          
+          <Texto texto="FECHAR" />
         </div>
       </motion.div>
     </div>
   );
 }
 
-
-function Texto({texto}) {
+function Texto({ texto }) {
   return (
     <div className={styles.texto}>
       <p>{texto}</p>
       <p>{texto}</p>
     </div>
-  )
+  );
 }
