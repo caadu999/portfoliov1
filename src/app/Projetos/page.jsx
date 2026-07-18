@@ -4,7 +4,6 @@ import { useRef, useEffect, useState } from "react";
 import styles from "@/app/Projetos/projetos.module.scss";
 import { anton } from "../../../public/fonts/fonts";
 import { Works } from "./data";
-import Lenis from "lenis";
 import Card from "./_Card";
 
 export default function Projetos() {
@@ -59,18 +58,6 @@ export default function Projetos() {
     setTimeout(() => {
       requestAnimationFrame(animate);
     }, 500);
-  }, []);
-
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
   }, []);
 
   useEffect(() => {

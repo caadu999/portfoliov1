@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import Cursor from "@/components/Cursor";
 import Titulo from "@/components/TituloHome";
 import Sobre from "@/components/Sobre";
-import Lenis from "lenis";
 
 export default function Home() {
   const loader = useRef(null);
@@ -61,34 +60,10 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
-
-  useEffect(() => {
     setPath(initialCurve);
     setTimeout(() => {
       requestAnimationFrame(animate);
     }, 500);
-  }, []);
-
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
   }, []);
 
   return (

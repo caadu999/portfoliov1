@@ -1,0 +1,26 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #cacaca;
+  margin-bottom: 60px;
+
+  h1 {
+    font-size: 8em;
+    color: #cacaca;
+    text-transform: uppercase;
+  }
+}
+
+.image {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  height: 700px;
+  border-radius: 18px;
+
+  img {
+    object-fit: cover;
+  }
+}

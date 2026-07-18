@@ -48,7 +48,7 @@ export default function Conteudo() {
             <motion.div
               animate={{
                 x: isHover ? -8 : 8,
-                color: isHover ? "#FFFFFF" : "black",
+                color: isHover ? "#FFFFFF" : "#000000",
               }}
               className={styles.texto}
             >
