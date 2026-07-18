@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import Cursor from "@/components/Cursor";
 
 import Overlay from "@/components/Overlay";
 import { IBM_Plex_Sans } from "next/font/google";
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
       <body>
         <LenisScroll>
           <Overlay />
+          <Cursor/>
           <Header />
           {children}
           <Footer />

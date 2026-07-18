@@ -36,12 +36,12 @@ export default function Sobre() {
         </motion.a>{" "}
         <br />
         <motion.a
-          href="https://www.linkedin.com/in/eduardo-souza-b59a1b285/"
+          href="https://github.com/caadu999/"
           target="_blank"
           initial="rest"
           whileHover="hover"
         >
-          Twitter
+          Github
           <motion.div
             className={styles.underline}
             variants={variantes}

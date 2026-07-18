@@ -54,40 +54,7 @@ export default function Card({ work }) {
               </div>
             ))}
           </div>
-          <button
-            onMouseEnter={(e) => setIsHover(true)}
-            onMouseLeave={(e) => setIsHover(false)}
-            className={styles.button}
-            type="submit"
-          >
-            <motion.div
-              className={styles.circle}
-              animate={{
-                scale: isHover ? 60 : 1,
-              }}
-              transition={{
-                ease: "easeIn",
-                duration: 0.3,
-              }}
-            ></motion.div>
-            <motion.div
-              animate={{
-                x: isHover ? -8 : 8,
-                color: isHover ? "#FFFFFF" : "#FFFFFF",
-              }}
-              className={styles.texto}
-            >
-              <p>VER WEBSITE</p>
-            </motion.div>
-            <motion.div
-              animate={{
-                x: isHover ? 0 : 70,
-              }}
-              className={styles.iconContainer}
-            >
-              <FaArrowRight size={16} className={styles.icon} />
-            </motion.div>
-          </button>
+          
         </motion.div>
       </Link>
       <div

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import styles from "@/app/Projetos/projetos.module.scss";
 import { anton } from "../../../public/fonts/fonts";
 import { Works } from "./data";

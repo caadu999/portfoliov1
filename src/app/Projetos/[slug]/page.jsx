@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
+import { geist } from "../../../../public/fonts/fonts";
 
 export default async function ProjetoPage({ params }) {
   const { slug } = await params;
@@ -17,19 +18,34 @@ export default async function ProjetoPage({ params }) {
 
   return (
     <main className={styles.container}>
-      <h1 className={anton.className}>{projeto.title}</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-        fugit, adipisci ducimus, porro cupiditate reprehenderit fuga magnam
-        voluptatibus magni sit expedita, facere aperiam reiciendis alias? Nisi
-        accusantium aliquam ipsa vitae?
-      </p>
+      <div className={styles.container__title}>
+        <h1 className={anton.className}>{projeto.title}</h1>
+        <div className={`${geist.className} ${styles.texto}`}>
+          <p>{projeto.description}</p>
 
-      <p>(ANO) 2026</p>
-      <p>(TECNOLOGIAS) </p>
-      <Link href="">
-        Website <MdArrowOutward />{" "}
-      </Link>
+          <div className={styles.lista}>
+            {projeto.tecs.map((tec) => (
+              <div key={projeto.title} className={styles.tecs}>
+                <div className={styles.ponto}></div>
+                {tec}
+              </div>
+            ))}
+          </div>
+          <div className={styles.links}>
+            <Link
+              className={styles.link}
+              href={projeto.website}
+              target="_blank"
+            >
+              Website <MdArrowOutward />{" "}
+            </Link>
+            <div className={styles.ponto}></div>
+            <Link className={styles.link} href={projeto.github} target="_blank">
+              GitHub <MdArrowOutward />{" "}
+            </Link>
+          </div>
+        </div>
+      </div>
       <div className={styles.image}>
         <Image
           src={projeto.src}
@@ -39,6 +55,27 @@ export default async function ProjetoPage({ params }) {
           quality={75}
           placeholder="blur"
         ></Image>
+      </div>
+
+      <div className={styles.sobre}>
+        <div className={styles.sobre__image}>
+          <Image
+            src={projeto.src}
+            alt={projeto.title}
+            fill
+            quality={75}
+            loading="lazy"
+            placeholder="blur"
+          ></Image>
+        </div>
+        <div className={styles.sobre__info}>
+          <h2>
+            Desafios <div className={styles.ponto}></div> Solução
+          </h2>
+          <p>{projeto.desafios}</p>
+
+          <p>{projeto.solucao}</p>
+        </div>
       </div>
     </main>
   );

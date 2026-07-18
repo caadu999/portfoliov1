@@ -1,7 +1,7 @@
 "use client";
 import styles from "@/app/page.module.css";
 import { useEffect, useRef } from "react";
-import Cursor from "@/components/Cursor";
+
 import Titulo from "@/components/TituloHome";
 import Sobre from "@/components/Sobre";
 
@@ -71,7 +71,6 @@ export default function Home() {
       <Sobre />
       <Titulo />
 
-      <Cursor />
       <div ref={loader} className={styles.loader}>
         <svg>
           <path ref={path}></path>
