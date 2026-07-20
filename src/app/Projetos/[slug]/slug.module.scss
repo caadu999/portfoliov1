@@ -1,3 +1,5 @@
+@use "../../../styles/mixins" as *;
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -17,6 +19,21 @@
     padding-left: 28px;
     margin-bottom: 60px;
   }
+
+  @include respond-to(sm) {
+    h1 {
+      font-size: 4em;
+      margin-top: 18px;
+      padding: 0px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+      p {
+        font-size: 0.6em;
+      }
+    }
+  }
 }
 
 .image {
@@ -29,6 +46,20 @@
 
   img {
     object-fit: cover;
+  }
+
+  @include respond-to(lg) {
+    width: 84%;
+    height: 600px;
+  }
+  @include respond-to(md) {
+    width: 84%;
+    height: 400px;
+  }
+
+  @include respond-to(sm) {
+    width: 84%;
+    height: 300px;
   }
 }
 
@@ -49,55 +80,28 @@
   &:hover {
     color: #c7532d;
   }
+  @include respond-to(sm) {
+    margin-top: 8px;
+    font-size: 0.7em;
+  }
 }
 
 .lista {
   display: flex;
   gap: 28px;
-}
+  flex-wrap: wrap;
 
-.sobre {
-  justify-content: space-between;
-
-  width: 80%;
-  margin: 0 auto;
-
-  display: flex;
-  gap: 12px;
-  margin-top: 60px;
-
-  h2 {
-    font-size: 2em;
-    color: #555555;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  p {
-    font-weight: bolder;
-    font-size: 1.5em;
-    width: 100%;
-    text-indent: 40px;
-  }
-
-  &__image {
-    position: relative;
-    width: 660px;
-    height: auto;
-    overflow: hidden;
-    border-radius: 12px;
-
-    img {
-      object-fit: cover;
-    }
-  }
-
-  &__info {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+  @include respond-to(md) {
+    font-size: 1em;
     gap: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  @include respond-to(sm) {
+    font-size: 0.7em;
+    gap: 6px;
+    margin-top: 12px;
   }
 }
 

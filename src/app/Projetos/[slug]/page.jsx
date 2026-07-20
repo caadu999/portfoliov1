@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
+import DetalheCard from "./Detalhe";
 import { geist } from "../../../../public/fonts/fonts";
 
 export default async function ProjetoPage({ params }) {
@@ -46,6 +47,7 @@ export default async function ProjetoPage({ params }) {
           </div>
         </div>
       </div>
+
       <div className={styles.image}>
         <Image
           src={projeto.src}
@@ -57,26 +59,7 @@ export default async function ProjetoPage({ params }) {
         ></Image>
       </div>
 
-      <div className={styles.sobre}>
-        <div className={styles.sobre__image}>
-          <Image
-            src={projeto.src}
-            alt={projeto.title}
-            fill
-            quality={75}
-            loading="lazy"
-            placeholder="blur"
-          ></Image>
-        </div>
-        <div className={styles.sobre__info}>
-          <h2>
-            Desafios <div className={styles.ponto}></div> Solução
-          </h2>
-          <p>{projeto.desafios}</p>
-
-          <p>{projeto.solucao}</p>
-        </div>
-      </div>
+      <DetalheCard projeto={projeto} />
     </main>
   );
 }

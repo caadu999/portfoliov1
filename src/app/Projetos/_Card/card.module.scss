@@ -1,5 +1,7 @@
+@use "../../../styles/mixins" as *;
+
 .container {
-  width: 50%;
+  width: 840px;
   display: flex;
   flex-direction: column;
   cursor: none;
@@ -12,16 +14,58 @@
     margin-top: 8px;
     font-size: 3.4em;
   }
+
+  @include respond-to(lg) {
+    width: 100%;
+    height: auto;
+
+    h1 {
+      font-size: 2em;
+    }
+  }
+  @include respond-to(md) {
+    width: 100%;
+    height: auto;
+    border-bottom: solid 1px #cacaca;
+    padding-bottom: 16px;
+
+    h1 {
+      font-size: 2em;
+    }
+  }
+  @include respond-to(sm) {
+    width: 100%;
+    height: auto;
+    border-bottom: solid 1px #cacaca;
+    padding-bottom: 16px;
+
+    h1 {
+      font-size: 2em;
+    }
+  }
 }
 
 .image {
   width: 100%;
-  height: 500px;
+  height: 460px;
   background-color: grey;
   border-radius: 10px;
   align-items: flex-end;
   position: relative;
   cursor: none;
+
+  @include respond-to(xl) {
+    height: 380px;
+  }
+  @include respond-to(lg) {
+    height: 290px;
+  }
+  @include respond-to(md) {
+    height: 400px;
+  }
+  @include respond-to(sm) {
+    height: 250px;
+  }
 }
 
 .lista {
@@ -29,6 +73,13 @@
   gap: 8px;
   flex-wrap: wrap;
   z-index: 2;
+  @include respond-to(md) {
+    display: none;
+  }
+
+  @include respond-to(sm) {
+    display: none;
+  }
 }
 
 .tec {

@@ -1,3 +1,5 @@
+@use "../../styles/mixins" as *;
+
 .container {
   display: flex;
 }
@@ -6,7 +8,15 @@
   position: fixed;
   right: 50px;
   top: 50px;
-  z-index: 10;
+  z-index: 3;
+
+  @include respond-to(sm) {
+    display: none;
+  }
+
+  @include respond-to(md) {
+    display: none;
+  }
 
   .menu {
     position: relative;

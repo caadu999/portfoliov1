@@ -1,0 +1,179 @@
+@use "../../../../styles/mixins" as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+  color: #cacaca;
+  margin-bottom: 60px;
+  width: 80%;
+}
+
+.image {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 800px;
+  border-radius: 18px;
+
+  img {
+    object-fit: cover;
+  }
+
+  @include respond-to(lg) {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 0px;
+  }
+  @include respond-to(md) {
+    width: 84%;
+    height: 400px;
+    margin-bottom: 0px;
+  }
+
+  @include respond-to(sm) {
+    width: 84%;
+    height: 250px;
+    margin-bottom: 0px;
+  }
+}
+
+.lista {
+  display: flex;
+  gap: 28px;
+}
+
+.sobre {
+  justify-content: space-between;
+
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  gap: 12px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  h2 {
+    font-size: 2em;
+    color: #555555;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  p {
+    font-weight: bolder;
+    font-size: 1.5em;
+    width: 100%;
+  }
+
+  &__image {
+    position: relative;
+    width: 660px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 12px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 12px;
+  }
+
+  @include respond-to(xl) {
+    gap: 20px;
+    align-items: center;
+    &__image {
+      height: 400px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    &__info {
+      width: 50%;
+      h2 {
+        font-size: 2.4em;
+      }
+    }
+  }
+  @include respond-to(lg) {
+    flex-direction: column;
+
+    &__image {
+      display: none;
+    }
+
+    p {
+      width: 100%;
+      font-size: 1.6em;
+      text-indent: 0px;
+    }
+
+    &__info {
+      width: 100%;
+      h2 {
+        font-size: 3em;
+      }
+    }
+  }
+  @include respond-to(md) {
+    flex-direction: column;
+
+    p {
+      width: 100%;
+      font-size: 1.6em;
+      text-indent: 0px;
+    }
+
+    &__info {
+      width: 100%;
+      h2 {
+        font-size: 3em;
+      }
+    }
+  }
+
+  @include respond-to(sm) {
+    flex-direction: column;
+
+    p {
+      width: 100%;
+      font-size: 1.2em;
+    }
+
+    &__info {
+      width: 100%;
+
+      h2 {
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+.circle {
+  display: inline-flex;
+  width: fit-content;
+  background-color: #c7532d;
+  margin: 0px 6px;
+  width: 6px;
+  height: 6px;
+}
+
+.ponto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #c7532d;
+}

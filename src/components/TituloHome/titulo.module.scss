@@ -1,17 +1,74 @@
+@use "../../styles/mixins" as *;
+
 .main {
   color: #cacaca;
   display: flex;
-  line-height: 88px;
+  line-height: 82px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   user-select: none;
-  font-size: 40px;
+  font-size: 36px;
   letter-spacing: 3px;
 
   span {
     font-size: 102px;
+  }
+
+  @include respond-to(xl) {
+    font-size: 2em;
+    line-height: 68px;
+
+    span {
+      font-size: 1.4em;
+    }
+
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  @include respond-to(lg) {
+    font-size: 1.8em;
+    line-height: 66px;
+
+    span {
+      font-size: 1.4em;
+    }
+
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  @include respond-to(md) {
+    font-size: 1.4em;
+    line-height: 50px;
+
+    span {
+      font-size: 1.4em;
+    }
+
+    h1 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @include respond-to(sm) {
+    font-size: 1em;
+
+    line-height: 40px;
+
+    span {
+      font-size: 1.4em;
+    }
+
+    h1 {
+      width: 90%;
+      text-align: center;
+    }
   }
 }
 

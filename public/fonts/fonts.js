@@ -7,7 +7,7 @@ import localFont from "next/font/local";
 export const geist = Geist({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"]
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const great = Great_Vibes({

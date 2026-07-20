@@ -54,7 +54,6 @@ export default function Card({ work }) {
               </div>
             ))}
           </div>
-          
         </motion.div>
       </Link>
       <div

@@ -22,6 +22,7 @@ html {
 }
 
 body {
+  cursor: none;
   background-color: #141414;
   /* 4. Increase line-height */
   line-height: 1.5;

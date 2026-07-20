@@ -34,7 +34,6 @@ export default function Sobre() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
           ></motion.div>
         </motion.a>{" "}
-        <br />
         <motion.a
           href="https://github.com/caadu999/"
           target="_blank"
@@ -42,6 +41,14 @@ export default function Sobre() {
           whileHover="hover"
         >
           Github
+          <motion.div
+            className={styles.underline}
+            variants={variantes}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          ></motion.div>
+        </motion.a>
+        <motion.a href="/Projetos" initial="rest" whileHover="hover">
+          Projetos
           <motion.div
             className={styles.underline}
             variants={variantes}
