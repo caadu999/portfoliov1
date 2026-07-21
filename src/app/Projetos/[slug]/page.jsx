@@ -26,7 +26,7 @@ export default async function ProjetoPage({ params }) {
 
           <div className={styles.lista}>
             {projeto.tecs.map((tec) => (
-              <div key={projeto.title} className={styles.tecs}>
+              <div key={tec} className={styles.tecs}>
                 <div className={styles.ponto}></div>
                 {tec}
               </div>

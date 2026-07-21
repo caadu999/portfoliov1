@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "@/app/Projetos/_Card/card.module.scss";
 import { lazy, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa6";
+
 import { MdArrowOutward } from "react-icons/md";
 import Link from "next/link";
 
@@ -41,7 +41,7 @@ export default function Card({ work }) {
         >
           <Image
             src={work.src}
-            alt={work.nome}
+            alt={work.id}
             fill
             quality={80}
             loading="lazy"
@@ -49,7 +49,7 @@ export default function Card({ work }) {
           />
           <div className={styles.lista}>
             {work.tecs.map((tec) => (
-              <div className={styles.tec} key={work.nome}>
+              <div className={styles.tec} key={tec}>
                 {tec}
               </div>
             ))}

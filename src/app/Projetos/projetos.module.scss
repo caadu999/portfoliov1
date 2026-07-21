@@ -16,39 +16,23 @@
 
   @include respond-to(md) {
     font-size: 6em;
-    margin: 20px;
-    padding: 0px;
+
+    padding-left: 24px;
   }
 
   @include respond-to(sm) {
     font-size: 4em;
-    margin: 20px;
-    padding: 0px;
-  }
-}
-.loader {
-  z-index: 10;
-  height: calc(100vh + 200px);
-  width: 100%;
-  position: fixed;
 
-  svg {
-    height: 100%;
-    width: 100%;
-
-    path {
-      stroke: rgb(0, 0, 0);
-      stroke-width: 1px;
-    }
+    padding-left: 24px;
   }
 }
 
 .body {
   width: 100%;
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-inline: 24px;
   gap: 26px;
   margin-bottom: 60px;
 

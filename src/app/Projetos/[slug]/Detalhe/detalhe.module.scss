@@ -46,6 +46,7 @@
 }
 
 .sobre {
+  align-items: center;
   justify-content: space-between;
 
   width: 100%;
@@ -73,7 +74,7 @@
   &__image {
     position: relative;
     width: 660px;
-    height: auto;
+    height: 400px;
     overflow: hidden;
     border-radius: 12px;
 

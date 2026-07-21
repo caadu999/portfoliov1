@@ -5,18 +5,3 @@
   align-items: center;
   justify-content: center;
 }
-.loader {
-  height: calc(100vh + 200px);
-  width: 100%;
-  position: fixed;
-
-  svg {
-    height: 100%;
-    width: 100%;
-
-    path {
-      stroke: rgb(0, 0, 0);
-      stroke-width: 1px;
-    }
-  }
-}

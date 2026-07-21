@@ -1,7 +1,7 @@
 @use "../../../styles/mixins" as *;
 
 .container {
-  width: 840px;
+  width: 670px;
   display: flex;
   flex-direction: column;
   cursor: none;
@@ -15,8 +15,16 @@
     font-size: 3.4em;
   }
 
+  @include respond-to(xl) {
+    width: 590px;
+    height: auto;
+
+    h1 {
+      font-size: 2em;
+    }
+  }
   @include respond-to(lg) {
-    width: 100%;
+    width: 430px;
     height: auto;
 
     h1 {
@@ -24,7 +32,7 @@
     }
   }
   @include respond-to(md) {
-    width: 100%;
+    width: 400px;
     height: auto;
     border-bottom: solid 1px #cacaca;
     padding-bottom: 16px;
@@ -34,7 +42,7 @@
     }
   }
   @include respond-to(sm) {
-    width: 100%;
+    width: 200px;
     height: auto;
     border-bottom: solid 1px #cacaca;
     padding-bottom: 16px;
@@ -47,7 +55,7 @@
 
 .image {
   width: 100%;
-  height: 460px;
+  height: 400px;
   background-color: grey;
   border-radius: 10px;
   align-items: flex-end;
@@ -61,7 +69,7 @@
     height: 290px;
   }
   @include respond-to(md) {
-    height: 400px;
+    height: 260px;
   }
   @include respond-to(sm) {
     height: 250px;
