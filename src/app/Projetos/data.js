@@ -2,6 +2,8 @@ import gamescope from "../../../public/gamescope.jpeg";
 import portfolio from "../../../public/portfolio.jpeg";
 import efeitoPortfolio from "../../../public/efeitoPortfolio.png";
 import efeitogamescope from "../../../public/efeitogamescope.png";
+import diario from "../../../public/diario.jpeg";
+import efeitodiario from "../../../public/efeitodiario.png";
 
 export const Works = [
   {
@@ -39,5 +41,22 @@ export const Works = [
       "Desenvolvi este portfólio para apresentar meus projetos e habilidades priorizando a boa experiência em mobile, já que grande parte dos acessos hoje vem do celular",
     website: "https://caducodedev.vercel.app/",
     github: "https://github.com/caadu999/portfoliov1",
+  },
+  {
+    slug: "dbordo",
+    id: "4",
+    title: "Diário a bordo",
+    data: "2026",
+    description: "Registro e anotações",
+    src: diario,
+    srcefeito: efeitodiario,
+    tecs: ["Javascript", "PWA", "LocalStorage"],
+    desafios:
+      "É uma Aplicação PWA desenvolvida para registrar e organizar anotações de forma simples e prática, com suporte a armazenamento local e instalação como aplicativo.",
+
+    solucao:
+      "Nesse projeto utilizo LocalStorage para persistência dos dados e Service Workers para oferecer funcionamento offline e instalação como aplicativo, proporcionando uma experiência mais próxima de uma aplicação nativa.",
+    website: "https://diario-a-bordo.vercel.app/",
+    github: "https://github.com/caadu999/diarioABordo",
   },
 ];
