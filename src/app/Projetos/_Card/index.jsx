@@ -40,12 +40,15 @@ export default function Card({ work }) {
           className={styles.image}
         >
           <Image
-            src={work.src}
+            onMouseEnter={() => setIsHover(true)}
+            onMouseLeave={() => setIsHover(false)}
+            src={isHover ? work.src : work.srcefeito}
             alt={work.id}
             fill
             quality={80}
             loading="lazy"
             placeholder="blur"
+            className={styles.imgEfeito}
           />
           <div className={styles.lista}>
             {work.tecs.map((tec) => (

@@ -20,6 +20,14 @@
     margin-bottom: 60px;
   }
 
+  @include respond-to(md) {
+    h1 {
+      font-size: 5em;
+      margin-top: 18px;
+      margin-bottom: 10px;
+      padding: 0px;
+    }
+  }
   @include respond-to(sm) {
     h1 {
       font-size: 4em;
@@ -43,6 +51,7 @@
   width: 80%;
   height: 800px;
   border-radius: 18px;
+  border: 1px solid #cacaca;
 
   img {
     object-fit: cover;

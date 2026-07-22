@@ -6,7 +6,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdArrowOutward } from "react-icons/md";
 import DetalheCard from "./Detalhe";
+
 import { geist } from "../../../../public/fonts/fonts";
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const projeto = Works.find((p) => p.slug === slug);
+
+  return {
+    title: `Portfolio • ${projeto.title}`,
+    description: projeto.description,
+  };
+}
 
 export default async function ProjetoPage({ params }) {
   const { slug } = await params;
