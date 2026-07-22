@@ -27,7 +27,8 @@ export const Works = [
     id: "3",
     title: "Portfolio Pessoal",
     data: "2026",
-    description: "Catálogo e wishlist de jogos com busca em tempo real",
+    description:
+      "Meu portfolio pessoal, desenvolvido por mim para apresentar meus projetos.",
     src: portfolio,
     srcefeito: efeitoPortfolio,
     tecs: ["NextsJS", "JSX", "SCSS", "Framer Motion", "Design"],
@@ -36,7 +37,7 @@ export const Works = [
 
     solucao:
       "Desenvolvi este portfólio para apresentar meus projetos e habilidades priorizando a boa experiência em mobile, já que grande parte dos acessos hoje vem do celular",
-    website: "https://gamescope-zeta.vercel.app/",
+    website: "https://caducodedev.vercel.app/",
     github: "https://github.com/caadu999/portfoliov1",
   },
 ];
