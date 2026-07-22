@@ -13,7 +13,7 @@ export default function Form() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    const res = await fetch("../api/contato", {
+    const res = await fetch("/api/contato", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, message, sobrenome }),
