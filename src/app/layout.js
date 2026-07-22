@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import HeaderMobile from "@/components/HeaderMobile";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Cursor from "@/components/Cursor";
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         <Loader />
         <LenisScroll>
           <Cursor />
+          <HeaderMobile />
           <Header />
           {children}
           <Footer />

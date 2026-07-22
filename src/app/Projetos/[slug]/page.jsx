@@ -9,6 +9,8 @@ import DetalheCard from "./Detalhe";
 
 import { geist } from "../../../../public/fonts/fonts";
 
+
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const projeto = Works.find((p) => p.slug === slug);
@@ -20,6 +22,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ProjetoPage({ params }) {
+ 
   const { slug } = await params;
 
   const projeto = Works.find((p) => p.slug === slug);

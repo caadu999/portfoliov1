@@ -25,6 +25,12 @@
     text-decoration: none;
     font-style: normal;
   }
+
+  @include respond-to(md) {
+    :nth-of-type(3) {
+      display: none;
+    }
+  }
 }
 
 .underline {
