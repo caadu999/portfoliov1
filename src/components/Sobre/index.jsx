@@ -22,7 +22,7 @@ export default function Sobre() {
       </p>
       <div className={styles.links}>
         <motion.a
-          href="https://www.linkedin.com/in/eduardo-souza-b59a1b285/"
+          href="https://www.linkedin.com/in/eduardosdev"
           target="_blank"
           initial="rest"
           whileHover="hover"
