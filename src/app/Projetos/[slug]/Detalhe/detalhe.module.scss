@@ -10,32 +10,38 @@
   width: 80%;
 }
 
+.imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
 .image {
-  margin: 0 auto;
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 800px;
-  border-radius: 18px;
+  width: 500px;
+  height: 300px;
 
   img {
     object-fit: cover;
   }
 
   @include respond-to(lg) {
-    width: 100%;
-    height: 600px;
+    width: 750px;
+    height: 450px;
     margin-bottom: 0px;
   }
   @include respond-to(md) {
-    width: 84%;
-    height: 400px;
+    width: 540px;
+    height: 280px;
     margin-bottom: 0px;
   }
 
   @include respond-to(sm) {
-    width: 84%;
-    height: 250px;
+    width: 330px;
+    height: 180px;
     margin-bottom: 0px;
   }
 }

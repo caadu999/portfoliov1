@@ -25,20 +25,53 @@ export default function DetalheCard({ projeto }) {
           </Link>
         </motion.div>
       </div>
-      <motion.div
-        className={styles.image}
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-      >
-        <Image
-          src={projeto.src}
-          alt={projeto.title}
-          fill
-          loading="lazy"
-          quality={75}
-          placeholder="blur"
-        ></Image>
+
+      <motion.div className={styles.imageContainer}>
+        <motion.div
+          className={styles.image}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        >
+          <Image
+            src={projeto.src}
+            alt={projeto.title}
+            fill
+            loading="lazy"
+            quality={75}
+            placeholder="blur"
+          ></Image>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className={styles.image}
+        >
+          <Image
+            src={projeto.src}
+            alt={projeto.title}
+            fill
+            loading="lazy"
+            quality={75}
+            placeholder="blur"
+          ></Image>
+        </motion.div>
+        <motion.div
+          className={styles.image}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+        >
+          <Image
+            src={projeto.src}
+            alt={projeto.title}
+            fill
+            loading="lazy"
+            quality={75}
+            placeholder="blur"
+          ></Image>
+        </motion.div>
       </motion.div>
     </div>
   );
