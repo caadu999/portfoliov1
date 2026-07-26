@@ -11,6 +11,8 @@
 }
 
 html {
+  scrollbar-width: thin;
+  scrollbar-color: #cacacc #141414;
   scroll-behavior: smooth;
 }
 
