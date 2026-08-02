@@ -34,7 +34,7 @@ export default function DetalheCard({ projeto }) {
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
           <Image
-            src={projeto.src}
+            src={projeto.img[0]}
             alt={projeto.title}
             fill
             loading="lazy"
@@ -49,7 +49,7 @@ export default function DetalheCard({ projeto }) {
           className={styles.image}
         >
           <Image
-            src={projeto.src}
+            src={projeto.img[1]}
             alt={projeto.title}
             fill
             loading="lazy"
@@ -64,7 +64,7 @@ export default function DetalheCard({ projeto }) {
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
           <Image
-            src={projeto.src}
+            src={projeto.img[2]}
             alt={projeto.title}
             fill
             loading="lazy"

@@ -1,6 +1,11 @@
-import gamescope from "../../../public/gamescope.jpeg";
+import gamescope from "../../../public/gamescope.png";
 import portfolio from "../../../public/portfolio.jpeg";
 import efeitoPortfolio from "../../../public/efeitoPortfolio.png";
+import gs02 from "../../../public/gs02.png";
+import gs03 from "../../../public/gs03.png";
+import gs04 from "../../../public/gs04.png";
+import pt01 from "../../../public/pt01.png";
+import pt02 from "../../../public/pt02.png";
 import efeitogamescope from "../../../public/efeitogamescope.png";
 import diario from "../../../public/diario.jpeg";
 import efeitodiario from "../../../public/efeitodiario.png";
@@ -22,6 +27,7 @@ export const Works = [
       "Os resultados da API são filtrados conforme o usuário digita, com debounce para evitar excesso de requisições e os jogos favoritados são salvos via localStorage, então o usuário mantém sua lista mesmo sem criar conta, e ela persiste entre sessões no mesmo navegador. ",
     website: "https://gamescope-zeta.vercel.app/",
     github: "https://github.com/caadu999/gamescope",
+    img: [gs02, gs03, gs04],
   },
 
   {
@@ -41,6 +47,7 @@ export const Works = [
       "Desenvolvi este portfólio para apresentar meus projetos e habilidades priorizando a boa experiência em mobile, já que grande parte dos acessos hoje vem do celular",
     website: "https://caducodedev.vercel.app/",
     github: "https://github.com/caadu999/portfoliov1",
+    img: [portfolio, pt01, pt02],
   },
   {
     slug: "dbordo",
@@ -58,5 +65,6 @@ export const Works = [
       "Nesse projeto utilizo LocalStorage para persistência dos dados e Service Workers para oferecer funcionamento offline e instalação como aplicativo, proporcionando uma experiência mais próxima de uma aplicação nativa.",
     website: "https://diario-a-bordo.vercel.app/",
     github: "https://github.com/caadu999/diarioABordo",
+    img: [diario, diario, diario],
   },
 ];

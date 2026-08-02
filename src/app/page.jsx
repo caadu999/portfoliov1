@@ -1,6 +1,6 @@
 "use client";
 import styles from "@/app/page.module.css";
-import { useEffect, useRef } from "react";
+
 
 import Titulo from "@/components/TituloHome";
 import Sobre from "@/components/Sobre";
