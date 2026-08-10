@@ -7,6 +7,7 @@ import Loader from "@/components/Loader";
 import Overlay from "@/components/Overlay";
 import { IBM_Plex_Sans } from "next/font/google";
 import LenisScroll from "@/components/LenisScroll";
+import Cortina from "@/components/Cortina";
 
 const IBM = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
     <html lang="pt-br" className={`${IBM.className}`}>
       <body>
         <Overlay />
-        <Loader />
+
         <LenisScroll>
           <Cursor />
           <HeaderMobile />

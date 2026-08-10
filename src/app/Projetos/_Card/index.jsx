@@ -2,7 +2,6 @@ import Image from "next/image";
 import styles from "@/app/Projetos/_Card/card.module.scss";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-
 import { MdArrowOutward } from "react-icons/md";
 import Link from "next/link";
 
