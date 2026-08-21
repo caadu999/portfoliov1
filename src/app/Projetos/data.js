@@ -8,6 +8,8 @@ import pt01 from "../../../public/pt01.png";
 import pt02 from "../../../public/pt02.png";
 import efeitogamescope from "../../../public/efeitogamescope.png";
 import diario from "../../../public/diario.jpeg";
+import diario1 from "../../../public/diario1.jpeg";
+import diario2 from "../../../public/diario2.jpeg";
 import efeitodiario from "../../../public/efeitodiario.png";
 
 export const Works = [
@@ -50,21 +52,21 @@ export const Works = [
     img: [portfolio, pt01, pt02],
   },
   {
-    slug: "dbordo",
+    slug: "anote",
     id: "4",
-    title: "Diário a bordo",
+    title: "Anote.",
     data: "2026",
     description: "Registro e anotações",
     src: diario,
     srcefeito: efeitodiario,
-    tecs: ["Javascript", "PWA", "LocalStorage"],
+    tecs: ["NextJS", "PWA", "JWT", "NodeJS", "MongoDB"],
     desafios:
-      "É uma Aplicação PWA desenvolvida para registrar e organizar anotações de forma simples e prática, com suporte a armazenamento local e instalação como aplicativo.",
+      "É uma aplicação web desenvolvida para criação e gerenciamento de anotações pessoais, com autenticação segura de usuários.",
 
     solucao:
-      "Nesse projeto utilizo LocalStorage para persistência dos dados e Service Workers para oferecer funcionamento offline e instalação como aplicativo, proporcionando uma experiência mais próxima de uma aplicação nativa.",
-    website: "https://diario-a-bordo.vercel.app/",
-    github: "https://github.com/caadu999/diarioABordo",
-    img: [diario, diario, diario],
+      "Nesse projeto utilizo JWT para autenticação e MongoDB para persistência dos dados, com uma API REST construída por mim em Node.js e Express, oferecendo uma experiência completa de cadastro, login e gerenciamento de notas próprias de cada usuário.",
+    website: "https://anoteapp-iota.vercel.app/",
+    github: "https://github.com/caadu999/anoteapp",
+    img: [diario1, diario2, diario],
   },
 ];

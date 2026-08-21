@@ -27,7 +27,7 @@ export default function Titulo() {
       <h1>JAVASCRIPT HTML CSS GIT</h1>
       <h1>FRAMER TYPESCRIPT</h1>
       <h1>
-        BOOTSTRAP
+        NODEJS
         <motion.span
           animate={{ opacity: [1, 1, 0, 0] }}
           transition={{
