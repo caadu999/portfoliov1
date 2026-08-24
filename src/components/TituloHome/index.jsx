@@ -15,7 +15,14 @@ const editorial = localFont({
 
 export default function Titulo() {
   return (
-    <main className={`${styles.main} ${editorial.className}`}>
+    <motion.main
+      initial={{ opacity: 0.4 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      viewport={{ once: false, amount: 0.8 }}
+
+      className={`${styles.main} ${editorial.className}`}
+    >
       <h1 className={`${styles.texto} `}>
         <span className={`${great.className} ${styles.initial}`}>E</span>DUARDO{" "}
         <span className={`${great.className} ${styles.initial}`}>S</span>OUZA
@@ -40,6 +47,6 @@ export default function Titulo() {
           _
         </motion.span>
       </h1>
-    </main>
+    </motion.main>
   );
 }

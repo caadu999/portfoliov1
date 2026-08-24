@@ -1,4 +1,5 @@
 import styles from "@/components/Sobre/sobre.module.scss";
+import AnimatedText from "@/components/efeitoTexto/efeitoTexto.jsx";
 import { motion } from "framer-motion";
 
 export default function Sobre() {
@@ -14,13 +15,14 @@ export default function Sobre() {
   };
   return (
     <>
-      <p className={styles.texto}>
+      <AnimatedText className={styles.texto}>
         EDUARDO SOUZA <br />
         Rio de Janeiro <br />
         Desenvolvedor Front-End <br />
         Open to Work
-      </p>
-      <div className={styles.links}>
+      </AnimatedText>
+
+      <AnimatedText as="div" stagger={0.2} className={styles.links}>
         <motion.a
           href="https://www.linkedin.com/in/eduardosdev"
           target="_blank"
@@ -55,7 +57,7 @@ export default function Sobre() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
           ></motion.div>
         </motion.a>
-      </div>
+      </AnimatedText>
     </>
   );
 }

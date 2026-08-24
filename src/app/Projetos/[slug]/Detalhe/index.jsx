@@ -11,9 +11,10 @@ export default function DetalheCard({ projeto }) {
       <div className={styles.sobre}>
         <motion.div
           className={styles.sobre__info}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
           <h2>
             Design <div className={styles.ponto}></div> Desenvolvimento
@@ -31,7 +32,8 @@ export default function DetalheCard({ projeto }) {
           className={styles.image}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
           <Image
             src={projeto.img[0]}
@@ -45,7 +47,7 @@ export default function DetalheCard({ projeto }) {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut" }}
           className={styles.image}
         >
           <Image
@@ -61,7 +63,7 @@ export default function DetalheCard({ projeto }) {
           className={styles.image}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
           <Image
             src={projeto.img[2]}

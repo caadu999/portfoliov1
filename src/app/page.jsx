@@ -2,12 +2,12 @@
 import styles from "@/app/page.module.css";
 import Titulo from "@/components/TituloHome";
 import Sobre from "@/components/Sobre";
-import Cortina from "@/components/Cortina";
+import Loader from "@/components/Loader";
 
 export default function Home() {
   return (
     <>
-      <Cortina />
+      <Loader />
       <main className={styles.main}>
         <Sobre />
         <Titulo />

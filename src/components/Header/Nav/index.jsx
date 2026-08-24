@@ -30,7 +30,9 @@ export default function Nav() {
             animate="enter"
             key={i}
           >
-            <a href={link.href}>{link.title}</a>
+            <a href={link.href} {...(link.download && { download: true })}>
+              {link.title}
+            </a>
           </motion.div>
         ))}
       </div>

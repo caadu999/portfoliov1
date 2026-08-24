@@ -26,7 +26,7 @@ export default function Header() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className={styles.header}>
+    <motion.div className={styles.header}>
       <motion.div
         className={styles.menu}
         variants={variantes}
@@ -36,6 +36,6 @@ export default function Header() {
         <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
       </motion.div>
       <Button isActive={isActive} setIsActive={setIsActive} />
-    </div>
+    </motion.div>
   );
 }

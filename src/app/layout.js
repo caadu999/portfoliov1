@@ -27,7 +27,6 @@ export default function RootLayout({ children }) {
         <Overlay />
 
         <LenisScroll>
-          <Cursor />
           <HeaderMobile />
           <Header />
           {children}

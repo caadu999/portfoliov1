@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./loader.module.scss";
 
@@ -8,26 +8,23 @@ export default function Loader() {
   const loader = useRef(null);
   const path = useRef(null);
   const pathname = usePathname();
-  const initialCurve = 200;
+  const initialCurve = 20; // agora em % (0-100), não pixels
   const duration = 600;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     let start;
     let rafId;
 
-    const loaderHeight = () => loader.current.getBoundingClientRect().height;
-
     const setPath = (curve) => {
-      const width = window.innerWidth;
-      const height = loaderHeight();
+      // sistema de coordenadas 0-100, proporcional via viewBox + preserveAspectRatio
       path.current.setAttributeNS(
         null,
         "d",
-        `M0 0
-        L${width} 0
-        L${width} ${height}
-        Q${width / 2} ${height - curve} 0 ${height}
-        L0 0`,
+        `M0,0
+        L100,0
+        L100,100
+        Q50,${100 - curve} 0,100
+        L0,0`,
       );
     };
 
@@ -37,12 +34,11 @@ export default function Loader() {
     const animate = (timestamp) => {
       if (start === undefined) start = timestamp;
       const elapsed = timestamp - start;
-
       if (!loader.current) return;
 
-      const height = loaderHeight();
-      const newTop = easeOutQuad(elapsed, 0, -height, duration);
-      loader.current.style.top = newTop + "px";
+      const height = loader.current.getBoundingClientRect().height;
+      loader.current.style.top =
+        easeOutQuad(elapsed, 0, -height, duration) + "px";
 
       if (elapsed < duration) {
         rafId = requestAnimationFrame(animate);
@@ -53,28 +49,22 @@ export default function Loader() {
       }
     };
 
-    if (loader.current) {
-      loader.current.style.visibility = "visible";
-      loader.current.style.pointerEvents = "auto";
-      loader.current.style.top = "0px";
-    }
+    // reset síncrono, antes do paint — some sem flash de conteúdo cru
+    loader.current.style.visibility = "visible";
+    loader.current.style.pointerEvents = "auto";
+    loader.current.style.top = "0px";
     start = undefined;
 
     setPath(initialCurve);
-    const timeoutId = setTimeout(() => {
-      rafId = requestAnimationFrame(animate);
-    }, 500);
+    rafId = requestAnimationFrame(animate);
 
-    return () => {
-      clearTimeout(timeoutId);
-      cancelAnimationFrame(rafId);
-    };
+    return () => cancelAnimationFrame(rafId);
   }, [pathname]);
 
   return (
     <div ref={loader} className={styles.loader}>
-      <svg>
-        <path ref={path}></path>
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path ref={path} d="M0,0 L100,0 L100,100 Q50,85 0,100 L0,0" />
       </svg>
     </div>
   );

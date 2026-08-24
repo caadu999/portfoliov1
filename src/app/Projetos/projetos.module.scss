@@ -14,6 +14,7 @@
   font-size: 8em;
   text-align: left;
   padding-left: 24px;
+  margin-bottom: 24px;
   span {
     position: absolute;
     bottom: 20px;
@@ -33,6 +34,17 @@
   }
 }
 
+.titleWrapper {
+  display: flex;
+  gap: 4px;
+  align-items: baseline;
+  font-size: 1em;
+
+  span {
+    font-size: inherit;
+    font-family: inherit;
+  }
+}
 .body {
   width: 100%;
   flex-wrap: wrap;

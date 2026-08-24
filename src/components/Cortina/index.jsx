@@ -54,7 +54,9 @@ export default function Cortina() {
         transition={{
           duration: 0.6,
         }}
-      ></motion.div>
+      >
+        eduardo souza
+      </motion.div>
     </motion.div>
   );
 }

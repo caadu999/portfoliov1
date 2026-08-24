@@ -1,34 +1,58 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import styles from "@/app/Projetos/projetos.module.scss";
 import { anton } from "../../../public/fonts/fonts";
 import { Works } from "./data";
 import Card from "./_Card";
-import Cortina from "@/components/Cortina";
+import Loader from "@/components/Loader";
 
 export default function Projetos() {
+  const easeReveal = [0.16, 1, 0.3, 1];
   return (
     <>
-      <Cortina />
+      <Loader />
       <main className={styles.main}>
-        <h1 className={`${anton.className} ${styles.title}`}>
-          PROJETOS{" "}
-          <motion.span
-            animate={{ opacity: [1, 1, 0, 0] }}
-            transition={{
-              duration: 1,
-              repeat: Infinity,
-              times: [0, 0.5, 0.5, 1],
-              ease: "linear",
+        <motion.div style={{ overflow: "hidden" }}>
+          <motion.h1
+            initial={{
+              y: "100%",
             }}
+            animate={{
+              y: "0%",
+            }}
+            transition={{
+              delay: 0.2,
+              duration: 1,
+              ease: easeReveal,
+            }}
+
+            className={`${anton.className} ${styles.title}`}
           >
-            _
-          </motion.span>
-        </h1>
+            PROJETOS{" "}
+          </motion.h1>
+        </motion.div>
         <div className={styles.body}>
-          {Works.map((work) => (
-            <Card key={work.id} work={work} />
+          {Works.map((work, i) => (
+            <motion.div
+              className={styles.cardContainer}
+              initial={{
+                y: 80,
+                opacity: 0,
+              }}
+              animate={{
+                y: [40, -10, 5, 0],
+                opacity: 1,
+              }}
+              transition={{
+                duration: 1.2,
+                delay: i * 0.1,
+                ease: easeInOut,
+              }}
+              key={work.id}
+            >
+              <Card work={work} />
+            </motion.div>
           ))}
         </div>
       </main>
