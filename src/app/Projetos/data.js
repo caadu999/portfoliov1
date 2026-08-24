@@ -11,6 +11,7 @@ import diario from "../../../public/diario.jpeg";
 import diario1 from "../../../public/diario1.jpeg";
 import diario2 from "../../../public/diario2.jpeg";
 import efeitodiario from "../../../public/efeitodiario.png";
+import gamescopeHome from "../../../public/gamescopeHome.png";
 
 export const Works = [
   {
@@ -19,7 +20,7 @@ export const Works = [
     title: "Gamescope",
     data: "2026",
     description: "Catálogo e wishlist de jogos com busca em tempo real",
-    src: gamescope,
+    src: gamescopeHome,
     srcefeito: efeitogamescope,
     tecs: ["NextsJS", "TypeScript", "Tailwind", "API", "Design"],
     desafios:

@@ -3,27 +3,14 @@ import styles from "@/app/Projetos/_Card/card.module.scss";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { MdArrowOutward } from "react-icons/md";
+import useMousePosition from "@/utils/useMousePosition";
 import Link from "next/link";
 
 export default function Card({ work }) {
   const cursorRef = useRef(null);
   const [isHover, setIsHover] = useState(false);
   const [showCursor, setShowCursor] = useState(false);
-
-  const handleMouseMove = (e) => {
-    if (!cursorRef.current) return;
-
-    cursorRef.current.style.left = e.clientX + "px";
-    cursorRef.current.style.top = e.clientY + "px";
-  };
-
-  const handleMouseEnter = () => {
-    cursorRef.current?.classList.add(styles.visible);
-  };
-
-  const handleMouseLeave = () => {
-    cursorRef.current?.classList.remove(styles.visible);
-  };
+  const { x, y } = useMousePosition();
 
   return (
     <div className={styles.container}>
@@ -31,7 +18,6 @@ export default function Card({ work }) {
         <motion.div
           onMouseEnter={() => setShowCursor(true)}
           onMouseLeave={() => setShowCursor(false)}
-          onMouseMove={handleMouseMove}
 
           whileHover={{ scale: 0.9 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -67,15 +53,22 @@ export default function Card({ work }) {
         <h1>{work.title}</h1>
         <p>{work.data}</p>
       </div>
-      <div
+      <motion.div
         className={`${styles.cursor}  ${showCursor ? styles.visible : ""}`}
         ref={cursorRef}
+        style={{
+          left: x,
+          top: y,
+        }}
+        transition={{
+          type: "tween",
+          ease: "backOut",
+        }}
       >
-        {" "}
         <p>
           VER PROJETO <MdArrowOutward />
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 }
