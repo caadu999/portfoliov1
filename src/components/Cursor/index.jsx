@@ -4,7 +4,7 @@ import styles from "@/components/Cursor/cursor.module.scss";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export default function Cursor() {
-  const cursorSize = 20;
+  const cursorSize = 15;
   const mouse = {
     x: useMotionValue(0),
     y: useMotionValue(0),

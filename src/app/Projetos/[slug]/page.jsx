@@ -3,7 +3,7 @@ import styles from "@/app/Projetos/[slug]/slug.module.scss";
 import { notFound } from "next/navigation";
 import Loader from "@/components/Loader";
 import ImageMain from "./components/ImagemMain";
-
+import Cursor from "@/components/Cursor";
 import DetalheCard from "./Detalhe";
 import TituloInfo from "@/app/Projetos/[slug]/components/Titulo";
 
@@ -29,6 +29,7 @@ export default async function ProjetoPage({ params }) {
   return (
     <>
       <Loader />
+      <Cursor />
       <main className={styles.container}>
         <TituloInfo projeto={projeto} />
 

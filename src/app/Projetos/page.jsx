@@ -6,12 +6,14 @@ import { anton } from "../../../public/fonts/fonts";
 import { Works } from "./data";
 import Card from "./_Card";
 import Loader from "@/components/Loader";
+import Cursor from "@/components/Cursor";
 
 export default function Projetos() {
   const easeReveal = [0.16, 1, 0.3, 1];
   return (
     <>
       <Loader />
+      <Cursor />
       <main className={styles.main}>
         <motion.div
           style={{

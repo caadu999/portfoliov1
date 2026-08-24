@@ -75,3 +75,28 @@
 .initial {
   font-weight: bolder;
 }
+
+.mask,
+.body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mask {
+  position: absolute;
+  mask-image: url("/mask.svg");
+  background-color: #e8e8e3;
+  mask-repeat: no-repeat;
+  mask-size: 20px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #141414;
+}
