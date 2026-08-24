@@ -24,11 +24,9 @@
   width: 500px;
   height: 300px;
   border: solid 1px #cacaca;
-  
 
   img {
     object-fit: cover;
-    
   }
 
   @include respond-to(lg) {

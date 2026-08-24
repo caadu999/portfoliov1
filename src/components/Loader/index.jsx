@@ -8,7 +8,7 @@ export default function Loader() {
   const loader = useRef(null);
   const path = useRef(null);
   const pathname = usePathname();
-  const initialCurve = 20; 
+  const initialCurve = 20;
   const duration = 600;
 
   useLayoutEffect(() => {
@@ -16,7 +16,6 @@ export default function Loader() {
     let rafId;
 
     const setPath = (curve) => {
-   
       path.current.setAttributeNS(
         null,
         "d",
@@ -48,7 +47,6 @@ export default function Loader() {
         loader.current.style.visibility = "hidden";
       }
     };
-
 
     loader.current.style.visibility = "visible";
     loader.current.style.pointerEvents = "auto";

@@ -13,7 +13,11 @@ export default function Projetos() {
     <>
       <Loader />
       <main className={styles.main}>
-        <motion.div style={{ overflow: "hidden" }}>
+        <motion.div
+          style={{
+            overflow: "hidden",
+          }}
+        >
           <motion.h1
             initial={{
               y: "100%",

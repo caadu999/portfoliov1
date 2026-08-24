@@ -4,7 +4,7 @@ import efeitoPortfolio from "../../../public/efeitoPortfolio.png";
 import gs02 from "../../../public/gs02.png";
 import gs03 from "../../../public/gs03.png";
 import gs04 from "../../../public/gs04.png";
-import pt01 from "../../../public/pt01.png";
+import pt01 from "../../../public/pt01.jpeg";
 import pt02 from "../../../public/pt02.png";
 import efeitogamescope from "../../../public/efeitogamescope.png";
 import diario from "../../../public/diario.jpeg";
