@@ -9,7 +9,7 @@ export const links = [
   },
   {
     title: "Baixar CV",
-    href: "/diario.jpeg",
+    href: "/EduardoSouzaCV.pdf",
     download: true,
   },
 ];

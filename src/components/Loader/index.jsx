@@ -8,7 +8,7 @@ export default function Loader() {
   const loader = useRef(null);
   const path = useRef(null);
   const pathname = usePathname();
-  const initialCurve = 20; // agora em % (0-100), não pixels
+  const initialCurve = 20; 
   const duration = 600;
 
   useLayoutEffect(() => {
@@ -16,7 +16,7 @@ export default function Loader() {
     let rafId;
 
     const setPath = (curve) => {
-      // sistema de coordenadas 0-100, proporcional via viewBox + preserveAspectRatio
+   
       path.current.setAttributeNS(
         null,
         "d",
@@ -49,7 +49,7 @@ export default function Loader() {
       }
     };
 
-    // reset síncrono, antes do paint — some sem flash de conteúdo cru
+
     loader.current.style.visibility = "visible";
     loader.current.style.pointerEvents = "auto";
     loader.current.style.top = "0px";
