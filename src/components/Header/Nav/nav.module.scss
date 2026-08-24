@@ -4,6 +4,9 @@
   height: 100%;
   padding: 100px 40px 50px 40px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .body {
     font-weight: lighter;
@@ -15,6 +18,19 @@
       font-weight: 200;
       text-decoration: none;
       font-size: 46px;
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    a {
+      width: 50%;
+      font-size: 20px;
+      color: rgb(31, 31, 31);
+      text-decoration: none;
     }
   }
 }
