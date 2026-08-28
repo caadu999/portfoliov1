@@ -6,6 +6,7 @@ import styles from "@/app/Projetos/[slug]/Detalhe/detalhe.module.scss";
 import Link from "next/link";
 
 export default function DetalheCard({ projeto }) {
+    const easeReveal = [0.16, 1, 0.3, 1];
   return (
     <div className={styles.container}>
       <div className={styles.sobre}>
@@ -30,9 +31,15 @@ export default function DetalheCard({ projeto }) {
       <motion.div className={styles.imageContainer}>
         <motion.div
           className={styles.image}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          initial={{ opacity: 0,
+            scale: 0.9,
+          }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, 
+            scale: {
+              duration: 0.5
+            },
+            ease: easeReveal}}
           viewport={{ once: true }}
         >
           <Image
@@ -45,9 +52,13 @@ export default function DetalheCard({ projeto }) {
           ></Image>
         </motion.div>
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, 
+            scale: {
+              duration: 0.5
+            },
+            ease: easeReveal }}
           className={styles.image}
         >
           <Image
@@ -61,9 +72,13 @@ export default function DetalheCard({ projeto }) {
         </motion.div>
         <motion.div
           className={styles.image}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, 
+            scale: {
+              duration: 0.5
+            },
+            ease: easeReveal }}
         >
           <Image
             src={projeto.img[2]}
