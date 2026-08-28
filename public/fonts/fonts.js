@@ -34,3 +34,8 @@ export const poppins = Poppins({
   display: "swap",
   weight: ["400", "500", "600", "700", "800", "900"],
 });
+
+export const druk = localFont({
+  src: "./DrukWideBold.ttf",
+  style: "normal",
+});

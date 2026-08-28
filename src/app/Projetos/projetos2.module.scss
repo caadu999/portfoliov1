@@ -5,11 +5,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
 
+.titulo {
+  padding-left: 24px;
+  width: fit-content;
   h1 {
-    font-size: 8em;
+    font-size: 7em;
     text-align: left;
-    padding-left: 24px;
-    margin-bottom: 24px;
+    position: relative;
   }
 }
