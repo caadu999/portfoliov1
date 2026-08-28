@@ -31,6 +31,7 @@ export const Works = [
     website: "https://gamescope-zeta.vercel.app/",
     github: "https://github.com/caadu999/gamescope",
     img: [gs02, gs03, gs04],
+    bg: "#c2c2c2",
   },
 
   {
@@ -51,6 +52,7 @@ export const Works = [
     website: "https://caducodedev.vercel.app/",
     github: "https://github.com/caadu999/portfoliov1",
     img: [portfolio, pt01, pt02],
+    bg: "#c2c2c2",
   },
   {
     slug: "anote",
@@ -69,5 +71,6 @@ export const Works = [
     website: "https://anoteapp-iota.vercel.app/",
     github: "https://github.com/caadu999/anoteapp",
     img: [diario1, diario2, diario],
+    bg: "#c2c2c2",
   },
 ];

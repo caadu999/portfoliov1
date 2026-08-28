@@ -2,7 +2,6 @@
 
 import { easeInOut, motion } from "framer-motion";
 import styles from "@/app/Projetos/projetos2.module.scss";
-import { anton } from "../../../public/fonts/fonts";
 import { Works } from "./data";
 import Modal from "@/app/Projetos/components/modal";
 import Loader from "@/components/Loader";
@@ -17,7 +16,7 @@ export default function Projetos() {
       <Loader />
       <Cursor />
       <div className={styles.main}>
-        <h1>Projetos</h1>
+        <h1>PROJETOS</h1>
         <div>
           {Works.map((work, index) => (
             <ProjetosComponent
@@ -29,7 +28,7 @@ export default function Projetos() {
             />
           ))}
         </div>
-        <Modal modal={modal} work={Works} />:
+        <Modal modal={modal} work={Works} />
       </div>
     </>
   );
