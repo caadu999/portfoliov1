@@ -1,67 +1,36 @@
 "use client";
 
 import { easeInOut, motion } from "framer-motion";
-import styles from "@/app/Projetos/projetos.module.scss";
+import styles from "@/app/Projetos/projetos2.module.scss";
 import { anton } from "../../../public/fonts/fonts";
 import { Works } from "./data";
-import Card from "./_Card";
+import Modal from "@/app/Projetos/components/modal";
 import Loader from "@/components/Loader";
 import Cursor from "@/components/Cursor";
+import ProjetosComponent from "@/app/Projetos/components/projetos";
+import { useState } from "react";
 
 export default function Projetos() {
-  const easeReveal = [0.16, 1, 0.3, 1];
+  const [modal, setModal] = useState({ active: false, index: 0 });
   return (
     <>
       <Loader />
       <Cursor />
-      <main className={styles.main}>
-        <motion.div
-          style={{
-            overflow: "hidden",
-          }}
-        >
-          <motion.h1
-            initial={{
-              y: "100%",
-            }}
-            animate={{
-              y: "0%",
-            }}
-            transition={{
-              delay: 0.2,
-              duration: 1,
-              ease: easeReveal,
-            }}
-
-            className={`${anton.className} ${styles.title}`}
-          >
-            PROJETOS{" "}
-          </motion.h1>
-        </motion.div>
-        <div className={styles.body}>
-          {Works.map((work, i) => (
-            <motion.div
-              className={styles.cardContainer}
-              initial={{
-                y: 80,
-                opacity: 0,
-              }}
-              animate={{
-                y: [40, -10, 5, 0],
-                opacity: 1,
-              }}
-              transition={{
-                duration: 1.2,
-                delay: i * 0.1,
-                ease: easeInOut,
-              }}
+      <div className={styles.main}>
+        <h1>Projetos</h1>
+        <div>
+          {Works.map((work, index) => (
+            <ProjetosComponent
               key={work.id}
-            >
-              <Card work={work} />
-            </motion.div>
+              work={work}
+              index={index}
+              modal={modal}
+              setModal={setModal}
+            />
           ))}
         </div>
-      </main>
+        <Modal modal={modal} work={Works} />:
+      </div>
     </>
   );
 }

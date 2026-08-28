@@ -36,7 +36,7 @@ export const Works = [
   {
     slug: "portfolio",
     id: "3",
-    title: "Portfolio Pessoal",
+    title: "Portfolio",
     data: "2026",
     description:
       "Meu portfolio pessoal, desenvolvido por mim para apresentar meus projetos.",
