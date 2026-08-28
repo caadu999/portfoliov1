@@ -1,3 +1,5 @@
+@use "../../../../styles/mixins" as *;
+
 .containerProjetos {
   display: flex;
   flex-direction: column;
@@ -18,6 +20,18 @@
     padding-left: 28px;
     text-transform: uppercase;
     font-size: 6.8em;
+  }
+
+  @include respond-to(md) {
+    h1 {
+      font-size: 5em;
+    }
+  }
+
+  @include respond-to(sm) {
+    h1 {
+      font-size: 3.4em;
+    }
   }
 }
 
@@ -43,7 +57,7 @@
 
 .linha {
   width: 100%;
-  height:1px;
+  height: 1px;
   position: absolute;
   bottom: 0;
   background-color: grey;
