@@ -53,7 +53,7 @@ export default function Titulo() {
             OUZA
           </h1>
           <h1 className={cormorant.className}>
-            <span className={mondWest.className}>☼ FRONT-END ☀</span>
+            <span className={mondWest.className}>☼ FULL-STACK ☀</span>
           </h1>
           <h1>REACT NEXT.JS TAILWIND</h1>
           <h1>JAVASCRIPT HTML CSS GIT</h1>
@@ -83,7 +83,7 @@ export default function Titulo() {
           <span className={`${great.className} ${styles.initial}`}>S</span>OUZA
         </h1>
         <h1 className={cormorant.className}>
-          <span className={mondWest.className}>☼ FRONT-END ☀</span>
+          <span className={mondWest.className}>☼ FULL-STACK ☀</span>
         </h1>
         <h1>REACT NEXT.JS TAILWIND</h1>
         <h1>JAVASCRIPT HTML CSS GIT</h1>
