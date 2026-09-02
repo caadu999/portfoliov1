@@ -7,7 +7,7 @@ import localFont from "next/font/local";
 import useMousePosition from "@/utils/useMousePosition";
 import { useState } from "react";
 
-const mondWest = localFont({
+export const mondWest = localFont({
   src: "../../../public/fonts/ppmondwest-regular.otf",
 });
 

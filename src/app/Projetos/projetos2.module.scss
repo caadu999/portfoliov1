@@ -24,15 +24,15 @@
 
   @include respond-to(md) {
     width: 90%;
-    
+
     align-self: center;
     flex-wrap: wrap;
     h1 {
       text-align: center;
-      font-size: 4em;
+      font-size: 3.1em;
+      margin-top: 10px;
     }
     p {
-      
       margin-bottom: 10px;
       font-size: 0.9em;
     }
@@ -44,4 +44,85 @@
       font-size: 4em;
     }
   }
+}
+
+.container {
+  display: flex;
+  gap: 60px;
+  padding: 24px;
+
+  &Description {
+    font-weight: bolder;
+    font-size: 19px;
+    color: #e8e8e3;
+  }
+
+  @include respond-to(md) {
+    flex-direction: column;
+  }
+}
+
+.containerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 30%;
+
+  @include respond-to(md) {
+    width: 100%;
+    gap: 8px;
+  }
+}
+
+.bola {
+  width: 14px;
+  height: 14px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.projetoContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.projetoP {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 19px;
+  color: #e8e8e3;
+
+  @include respond-to(sm) {
+    font-size: 16px;
+  }
+}
+
+.interacao {
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.button {
+  width: fit-content;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: #e8e8e3;
+}
+
+.containerTitulo {
+  font-size: 14px;
+  margin-top: 10px;
 }

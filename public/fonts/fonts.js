@@ -4,6 +4,7 @@ import { Geist } from "next/font/google";
 import { Anton } from "next/font/google";
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
+import { suisse } from "next/font/google";
 
 export const geist = Geist({
   subsets: ["latin"],

@@ -19,12 +19,12 @@
     color: #e8e8e3;
     padding-left: 28px;
     text-transform: uppercase;
-    font-size: 6.8em;
+    font-size: 94px;
   }
 
   @include respond-to(md) {
     h1 {
-      font-size: 5em;
+      font-size: 4em;
     }
   }
 
@@ -51,7 +51,19 @@
     color: #141414;
     padding-left: 28px;
     text-transform: uppercase;
-    font-size: 6.8em;
+    font-size: 94px;
+  }
+
+  @include respond-to(md) {
+    h1 {
+      font-size: 4em;
+    }
+  }
+
+  @include respond-to(sm) {
+    h1 {
+      font-size: 3.4em;
+    }
   }
 }
 
