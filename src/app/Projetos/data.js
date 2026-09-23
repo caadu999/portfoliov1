@@ -65,7 +65,7 @@ export const Works = [
       "É uma aplicação web desenvolvida para criação e gerenciamento de anotações pessoais, com autenticação segura de usuários.",
 
     solucao:
-      "Nesse projeto utilizo JWT para autenticação e MongoDB para persistência dos dados, com uma API REST construída por mim em Node.js e Express, oferecendo uma experiência completa de cadastro, login e gerenciamento de notas próprias de cada usuário.",
+      "Nesse projeto utilizo JWT para autenticação, PostgreSQL e PRISMA ORM para persistência dos dados, com uma API REST construída por mim em Node.js e Express, oferecendo uma experiência completa de cadastro, login e gerenciamento de notas próprias de cada usuário.",
     website: "https://anoteapp-iota.vercel.app/",
     github: "https://github.com/caadu999/anoteapp",
     img: [anote, diario2, diario1],
